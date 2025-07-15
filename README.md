@@ -1,2 +1,24 @@
-# traceroute-country.sh-
-A lightweight Bash script that runs traceroute to a target host and displays each hop along with its IP address, hostname, and the full country name where the IP is registered. Useful for analyzing network routes, detecting suspicious VPN paths, ISP routing issues, or packet detours through unexpected countries.
+# traceroute-country.sh
+
+A Bash script that reveals the true path of your internet traffic — hop by hop — with full country names.
+
+## ✨ Features
+
+- Runs `traceroute` to any domain or IP
+- Shows IP, reverse-resolved hostname, and full country name for each hop
+- Uses `ipinfo.io` for IP geolocation
+- Displays results in a clean table format
+- Great for debugging VPNs, censorship routes, or unusual network behavior
+
+## 📦 Requirements
+
+- `bash`
+- `traceroute`
+- `curl`
+- `getent` (part of GNU `libc`)
+
+## 🚀 Usage
+
+```bash
+chmod +x traceroute-country.sh
+./traceroute-country.sh example.com
